@@ -1,0 +1,29 @@
+---
+title: Randomness
+mission: >
+    Symmetry is beautiful, but so is chaos! Use the random() function to mix things up!
+
+instructions:
+  - title: Angles
+    mission: >
+     
+  - title: Bullseye
+    mission: >
+     
+layout: code
+codeLevel: 0
+codeOrder: 3
+thumb: 'question'
+tags: ['draw','index']
+refs: ['function', 'variables']
+code: |
+  turtle.remove()
+  s = hatch 15, random('color')
+  for i  in [0..100]
+    s.plan ->
+      s.pen random('color'), random()*20
+      if random() > .5
+        this.rt random()* 360, abs(100 * random normal)
+      else
+        this.lt random()* 360, abs(100 * random normal)
+---

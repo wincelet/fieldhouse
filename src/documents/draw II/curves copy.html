@@ -1,0 +1,29 @@
+---
+title: Dynamic Patterns
+subtitle: drawing with functions
+mission: >
+  By making your commands variable inside of a function, you can greatly expand your creativity!
+instructions:
+  
+     
+layout: code
+codeLevel: 0
+codeOrder: 1
+thumb: 'question'
+refs: ['function', 'variables']
+code: |
+  #change the variable values to change the function behavior
+  pen blue
+  dist = 50
+  turnAngle = 90
+  repetitions = 4
+
+  #function definition
+  shapeCreator = (x,y,z) -> 
+    for [0 ... z]
+      fd x 
+      rt y
+
+  #call the function with the variables
+  shapeCreator dist, turnAngle, repetitions
+---

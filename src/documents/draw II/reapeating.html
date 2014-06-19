@@ -1,0 +1,35 @@
+---
+title: Repeating Shapes and patterns
+mission: >
+  Shapes can be created through explicit pathing. However, most shapes have a repeatable pattern.
+  Try taking advantage of this by creating different shapes and patterns using loops. 
+instructions:
+  - title: Angles
+    mission: >
+      Try using a loop to repeat moving and turning. See what shapes and patterns you can make.
+      make a donut. 
+  
+layout: code
+codeLevel: 0
+codeOrder: 2
+thumb: 'question'
+tags: ['draw','index']
+refs: ['shapes']
+code: |
+  speed 500
+  pen red
+  dist = 100
+  turnAngle = 72
+  repetitions = 5
+  AngleinBetween = 15
+
+  #function definition
+  patternCreator = (x,y,z,q) -> 
+    for [0 ... (360/q)]
+      for [0 ... z-1]
+        fd x 
+        rt y
+      lt q
+  #call the function with the variables
+  patternCreator dist, turnAngle, repetitions, AngleinBetween
+---
